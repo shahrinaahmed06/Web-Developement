@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>PHP Functions</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<task1>Use of PHP built-in functions</h1>
+<?php
+  $days = array(
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday"
+  );
+  
+  echo "<p>The days of the weeks are: ";
+  echo "<p>",$days[];
+?>
+</body>
+</html>

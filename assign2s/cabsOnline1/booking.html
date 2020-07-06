@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" XMLns="http://www.w3.org/1999/xHTML">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+    <!--
+        Author: Shahrina Ahmed
+        17999929
+        Booking.html displaying a form for users to enter personal data to create a request.
+    -->
+    <script type="text/javascript" src="xhr.js"></script>
+    <script type="text/javascript" src="bookingDisplay.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/booking-style.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="cabsOnline.html">Go Back To Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        Cabs Online Booking
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="admin.html">Admin Page</a>
+                    </li>
+                </ol>
+            </nav>
+            <h2>Booking Request Form</h2>
+            <div id="display">
+                <p></p>
+            </div>
+
+            <form role="form">
+                <div class="form-group">
+                    <label>
+                         Customer Name
+                    </label>
+                    <input type="text" class="form-control" id="nameField" name="name" placeholder= "Enter Your Name" required/>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Customer Phone
+                    </label>
+                    <input type="text" class="form-control" id="phoneField" name="phone" placeholder= "Enter Your Phone number" required/>
+                </div>
+                <div class="form-group">
+                    <label>Pick-up Location</label>
+                    <br>Unit (if applicable):
+                    <input type="text" class="form-control" id="UnitField" placeholder="Place your unit number" name="unit">
+                    <br>Street Number:
+                    <input type="text" class="form-control" id="streetNumberField" name="streetNumber" placeholder="Enter street number" required>
+                    <br>Street Name:
+                    <input type="text" class="form-control" id="streetNameField" name="streetName" placeholder="Enter street name" required>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Pick-up Date
+                    </label>
+                    <input type="date" class="form-control" id="pickupDateField" name="date" placeholder="Enter pick up date" required/>
+                </div>
+                <div class="form-group">
+                    <label> Pick-up Time</label>
+                    <input type="time" class="form-control" id="pickupTimeField" name="time" placeholder="00:00" required/>
+                </div>
+               
+                <div class="form-group">
+                    <label>Destination Suburb </label>
+                    <input type="text" class="form-control" id="destinationField" name="locationDropoff" placeholder="Enter Destination Suburb"required>
+                </div>
+
+                <!-- call function with parameters -->
+                <button type="button" class="btn btn-success" onClick="booking('bookingprocess.php', 'display')">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

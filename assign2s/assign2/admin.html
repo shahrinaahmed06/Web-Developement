@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Page - Shahrina Ahmed</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script type="text/javascript" src="xhr.js"></script>
+        <script type="text/javascript" src="booking.js"></script>
+        <script type="text/javascript" src="admin.js"></script>
+        
+        
+</head>
+<body>
+
+
+                      <a href="cabsonline.html">Home</a>
+                 
+                 
+                      <a href="booking.html">Booking</a>
+           
+                  
+                      <div class="container">
+                        <div class="content">
+                            <h1>Cabs Online</h1>
+                        </div>
+            
+             
+                        <div class="content">
+          <h2>Assign Cab booking</h2>
+          <form >
+             
+                  <input type="text" name="Booking_Number"> <br> <br>
+                  
+                  <input type="button" class="btn btn-success"
+                         onClick="assignment('assignment.php', 'confirmation', 'date')" value='view-requests'>
+                  
+                         <input type="button" class="btn btn-success"
+                         onClick="booking('setAssigned.php', 'confirmation', Booking_Number.value)" value="assign-driver">
+              
+          </form>
+        </div>
+    </div>
+    </body>
+</html>

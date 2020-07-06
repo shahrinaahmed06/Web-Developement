@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS cabsbooking
+	(
+		BookingNumber INT NOT NULL,
+        CustomerName VARCHAR(40) NOT NULL,
+		CustomerPhone INT(20) NOT NULL,
+        CustomerAddress VARCHAR(70) NOT NULL,
+		PickupDateTime DateTime NOT NULL,
+		Destination VARCHAR(40) NOT NULL,
+		BookingDateTime DateTime NOT NULL,
+		BookingStatus VARCHAR(20) NOT NULL,
+		PRIMARY KEY(BookingNumber)
+	);

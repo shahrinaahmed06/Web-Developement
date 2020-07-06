@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" XMLns="http://www.w3.org/1999/xHTML">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Page</title>
+    <!--
+      Author Shahrina Ahmed 17999929
+      The file booking.html is creating a booking form for customer to enter booking information 
+      to request a booking
+       
+    -->
+    <script type="text/javascript" src="xhr.js"></script>
+    <script type="text/javascript" src="bookingRequest.js"></script>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/booking-style.css">
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="cabOnline.html">Go To HomePage</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        Booking for Cab
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="admin.html">Admin Page</a>
+                    </li>
+                </ol>
+            </nav>
+            <h2>Create a Booking Request</h2>
+            <div id="targetDiv">
+                <p></p>
+            </div>
+
+            <form role="form">
+                <div class="form-group">
+                    <label for="nameField">Customer Name </label>
+                    <input type="text" class="form-control" name="name" id="nameField" placeholder="Please Enter your name" required/>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phoneField">Customer Phone</label>
+                    <input type="text" class="form-control" name="phone" id="phoneField" placeholder="Please Enter your phone" required/>
+                </div>
+
+                <div class="form-group">
+                    
+                    <label> Pick-up Address
+                    </label>
+                    <br>Unit (if Applicable):
+                    <input type="text" class="form-control" name="unit " id="unitField" placeholder="Enter Unit number">
+                    <br>Street Number:
+                    <input type="text" class="form-control" name="streetNumber" id="streetNumberField" placeholder="Enter Street number" required>
+                    <br>Street Name:
+                    <input type="text" class="form-control"  name="streetName" id="streetNameField" placeholder="Enter Street name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dateField">PickUp Date</label>
+                    <input type="date" class="form-control" name="date"id="dateField" placeholder="Please Enter pickup date" required/>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timeField">PickUp Time</label>
+                    <input type="time" class="form-control" name="time" id="timeField" placeholder="Please Enter pickup time" required/>
+                </div>
+                
+                <div class="form-group">
+                    <label for="destinationField">Destination Suburb</label>
+                    <input type="text" class="form-control" name="destination"id="destinationField" placeholder="Enter destination suburb" required>
+                </div>
+
+                <!-- call function with parameters -->
+                <button type="button" class="btn btn-success" onClick="bookRequest('bookingProcess.php', 'targetDiv',nameField.value, phoneField.value, unitField.value, streetNumberField.value, streetNameField.value,dateField.value,timeField.value, destinationField.value)">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

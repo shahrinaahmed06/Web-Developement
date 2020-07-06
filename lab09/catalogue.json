@@ -1,0 +1,7 @@
+{
+    "book": ["Beginning ASP.NET with CSharp", "CSS in 44 minutes", "Oh the Places You'll Go"],
+    "author": ["Hart, Kauffman, Sussman, Ullman", "Jeremy Thomas", "Amos Q.Haviv"],
+    "isbn": ["0764588508", "123456789", "7896541235"],
+    "price": ["$39.99", "$49.99", "$44.99"],
+    "img": ["begaspnet.jpg", "css.jpg", "meanweb.jpg"]
+}

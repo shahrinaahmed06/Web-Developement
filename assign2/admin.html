@@ -1,0 +1,52 @@
+<HTML XMLns="http://www.w3.org/1999/xHTML">
+    <head>
+        <!-- Author: Shahrina Ahmed 17999929
+            Admin management file where unassigned request will displayed
+            and unassigned requests can be set to assigned.
+        -->
+        <title>Admin Page</title>
+        <script type="text/javascript" src="xhr.js"></script>
+        <script type="text/javascript" src="admin.js"></script>
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="cabOnline.html">
+                                Go back to Home
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <a href="booking.html">
+                                Cab Booking Page
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                         Admin
+                        </li>
+                    </ol>
+                </nav>
+                <h2>Assign a Booking</h2>
+                <div id="targetConfirm">
+                    <p></p>
+                </div>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" name="BookingNumber"> <br> <br>
+                       
+                        <input type="button" class="btn btn-success" onClick="assign('requestAssign.php', 'targetConfirm', 'date')" value='view all unassigned requests'>
+                        <input type="button" class="btn btn-success" onClick="book('assignForrequest.php', 'targetConfirm', BookingNumber.value)" value="assign to driver">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+    </HTML>

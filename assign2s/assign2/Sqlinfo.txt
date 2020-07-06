@@ -1,0 +1,13 @@
+CREATE TABLE `booking` (
+ `Booking_Number` bigint(20) NOT NULL,
+ `Customer_Name` varchar(40) NOT NULL,
+ `Customer_Phone` bigint(20) NOT NULL,
+ `Unit_Number` varchar(10) DEFAULT NULL,
+ `Street_Address` varchar(50) NOT NULL,
+ `Destination_Suburb` varchar(20) NOT NULL,
+ `Pickup_DateTime` datetime NOT NULL,
+ `Booking_Status` varchar(20) DEFAULT NULL,
+ `Booked_Date` date NOT NULL,
+ `Booked_Time` time NOT NULL,
+ PRIMARY KEY (Booking_Number)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
